@@ -1,11 +1,50 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Unity WebGL Player | Createjam2019spring</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="UnityGame/TemplateData/UnityProgress.js"></script>
+    <script src="UnityGame/Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "UnityGame/Build/UnityGame.json", {onProgress: UnityProgress});
+    </script>
+    <link rel="stylesheet" href="WebMini.css" />
   </head>
   <body>
+    <header>
+      <h1>Testybois</h1>
+      <nav>
+        <a href="WebMini.html" class="current">YO</a>
+        <a href="test.html">HEY</a>
+      </nav>
 
+<<<<<<< HEAD
     <script src="js/jquery-1.11.0.js"></script>
+=======
+      <section id="content">
+        <div id="container">
+          <!-- Page content li ves here -->
+          <p>This is content which will hopefully be replace when you click on HEY someday.</p>
+          </ div>
+        </section>
+    </header>
+
+
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Createjam2019spring</div>
+      </div>
+    </div>
+
+
+    <!--The jquery script is giving an error, making everything fuck up. Can't be found apparently.-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="WebMini.js"></script>
+>>>>>>> Anders_Hemmelige_Hule
   </body>
 </html>
