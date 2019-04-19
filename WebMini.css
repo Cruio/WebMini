@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{margin: 0; padding: 0;}
 
 body
@@ -80,3 +81,18 @@ p
 {
   margin-bottom: 20px;
 }
+=======
+nav {
+  font-family: oswald, arial, sans-serif;
+  width: 600px;
+  padding-top: 30px;
+  font-size: 1.4em;
+  text-align: right;
+  text-transform: uppercase;}
+nav a {
+  padding-left: 30px;}
+nav a:hover, a.current {
+  color: #d71a00;}
+
+a {text-decoration: none; color: #000;}
+>>>>>>> 74d64973bec7607046a0e425303cff6a85f560a1
