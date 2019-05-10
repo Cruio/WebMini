@@ -1,38 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Unity WebGL Player | Createjam2019spring</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="UnityGame/TemplateData/UnityProgress.js"></script>
-    <script src="UnityGame/Build/UnityLoader.js"></script>
-    <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "UnityGame/Build/UnityGame.json", {onProgress: UnityProgress});
-    </script>
-    <link rel="stylesheet" href="WebMini.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Testybois</h1>
-      <nav>
-        <a href="WebMini.html" class="current">YO</a>
-        <a href="test.html">HEY</a>
-      </nav>
-
-      <section id="content">
-        <div id="container">
-          <!-- Page content li ves here -->
-          <p>This is content which will hopefully be replace when you click on HEY someday.</p>
-          </ div>
-        </section>
-    </header>
-
-    <!--The jquery script is giving an error, making everything fuck up. Can't be found apparently.-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="WebMini.js"></script>
-  </body>
 <head>
+  <meta charset="utf-8">
+  <title>Unity WebGL Player | Createjam2019spring</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <script src="UnityGame/TemplateData/UnityProgress.js"></script>
+  <script src="UnityGame/Build/UnityLoader.js"></script>
+  <script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "UnityGame/Build/UnityGame.json", {onProgress: UnityProgress});
+  </script>
   <meta charset="utf-8">
   <title>WebMini</title>
   <link rel="stylesheet" href="WebMini.css">
@@ -80,13 +57,29 @@
   </div>
 <!--here end the game-->
     <!--this could be where we put how to play-->
-  <div id="footer">
-    <div class="container">
-      <div id="howtoplayArea"></div>
+<!--here end the how to play-->
+<div id="header">
+  <div class="container">
+    <div class="navArea">
+      <nav id="nav">
+        <a href="WebMini.html" class ="content current" id = "container"><li>How To Play</li></a>
+        <a href="test.html" class="content2 content Rcontainer" ><li>About The Game</li></a>
+      </nav>
     </div>
   </div>
-<!--here end the how to play-->
+</div>
+<section id="content">
+  <div id="Rcontainer">
+    <!-- Page content lives here -->
+    <p>Use either WASD or the arrow keys to control Tobi.</p>
+    <p>Dodge the pink bullets, Gubbo the fish, as well as the giant robots.</p>
+    <p>Move through green gates to gain health. Do not move through them if they are red.</p>
+    <p>Stay alive for as long as possible to get a high score.</p>
+    </div>
+  </section>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="WebMini.js"></script>
 </body>
 
 </html>
