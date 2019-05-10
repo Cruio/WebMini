@@ -45,10 +45,10 @@ text-decoration: none;
 #nav li
 {
   float: left;
-  margin-left: 30px;
-  background-color: #252525;
+  margin-left: 75px;
+  background-color: Black;
   padding: 8px;
-  border: 1px solid silver;
+  border: 1px solid rgba(137,24,190,1);
   border-radius: 5px;
 }
 #nav li:hover
