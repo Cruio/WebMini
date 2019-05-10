@@ -47,9 +47,9 @@
       <div class="ScoreArea" style="">
         <h2>High Score</h2>
         <ul>
+          <li class = "ScoreText"> Mike Score: 1000001</li>
           <li class = "ScoreText"> Lars Score:1000000</li>
           <li class = "ScoreText"> Anders Score:999999</li>
-          <li class = "ScoreText"> Mike Score: Sucks</li>
           <li class = "ScoreText"> Win</li>
           <li class = "ScoreText"> Win</li>
           <li class = "ScoreText"> Win</li>
@@ -65,30 +65,34 @@
           <li class = "ScoreText"> Win</li>
         </ul>
       </div>
-    </div>
-  </div>
+</div>
+
 <!--here end the game-->
     <!--this could be where we put how to play-->
 <!--here end the how to play-->
-<div id="header">
-  <div class="container">
+  <div class="infocontainer container page">
+    <div id="header">
     <div class="navArea">
-      <nav id="nav">
-        <a href="WebMini.html" class ="content current" id = "container"><li>How To Play</li></a>
-        <a href="test.html" class="content2 content Rcontainer" ><li>About The Game</li></a>
-      </nav>
+      <ul class="infobuttons" id="nav">
+        <a href="WebMini.html" class ="content content Rcontainer" "current"><li>How To Play</li></a>
+        <a href="test.html" class="content content Rcontainer" ><li>About The Game</li></a>
+        <a href="test.html" class="content2 content Rcontainer" ><li>Free Cake</li></a>
+      </ul>
     </div>
   </div>
-</div>
+
+
 <section id="content">
-  <div id="Rcontainer">
-    <!-- Page content lives here -->
+  <div class="infoArea container" id="Rcontainer">
     <p>Use either WASD or the arrow keys to control Tobi.</p>
     <p>Dodge the pink bullets, Gubbo the fish, as well as the giant robots.</p>
     <p>Move through green gates to gain health. Do not move through them if they are red.</p>
     <p>Stay alive for as long as possible to get a high score.</p>
-    </div>
-  </section>
+  </div>
+</section>
+</div>
+
+</div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="WebMini.js"></script>
