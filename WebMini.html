@@ -2,13 +2,14 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Unity WebGL Player | Createjam2019spring</title>
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
   <script src="UnityGame/TemplateData/UnityProgress.js"></script>
   <script src="UnityGame/Build/UnityLoader.js"></script>
   <script>
-    var gameInstance = UnityLoader.instantiate("gameContainer", "UnityGame/Build/UnityGame.json", {onProgress: UnityProgress});
+    var gameInstance = UnityLoader.instantiate("gameContainer", "UnityGame/Build/web game.json", {onProgress: UnityProgress});
   </script>
   <meta charset="utf-8">
   <title>WebMini</title>
@@ -40,7 +41,7 @@
         <div id="gameContainer" ></div>
         <div class="footer">
           <div class="webgl-logo"></div>
-          <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+          <!--<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>-->
         </div>
       </div>
 
@@ -65,11 +66,19 @@
           <li class = "ScoreText"> Win</li>
         </ul>
       </div>
+      <div class="scoreSubmit">
+          <form> <!--action=""-->
+            <fieldset>
+            <p>
+              Name: <input type="text" name="name">   Score: <input type="number" name="score">
+            </p>
+          </fieldset>
+          </form>
+      </div>
 </div>
 
 <!--here end the game-->
-    <!--this could be where we put how to play-->
-<!--here end the how to play-->
+
   <div class="infocontainer container page">
     <div id="header">
     <div class="navArea">
@@ -84,6 +93,7 @@
 
 <section id="content">
   <div class="infoArea container" id="Rcontainer">
+    <p>Do not press either Help or Quit in menu. If you do, refresh page.</p>
     <p>Use either WASD or the arrow keys to control Tobi.</p>
     <p>Dodge the pink bullets, Gubbo the fish, as well as the giant robots.</p>
     <p>Move through green gates to gain health. Do not move through them if they are red.</p>
