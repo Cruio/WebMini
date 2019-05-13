@@ -4,6 +4,7 @@ body
 {
   font-family: arial;
   background-image: url(Img/backGround.png);
+  color: white;
 }
 #header
 {
@@ -60,6 +61,7 @@ text-decoration: none;
   background-color: rgba(0,0,0, 0.5);
   padding: 20px;
   padding-bottom: 1;
+  background-color: black;
 }
 #footer
 {
