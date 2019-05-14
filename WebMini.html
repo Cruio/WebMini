@@ -67,10 +67,13 @@
         </ul>
       </div>
       <div class="scoreSubmit">
-          <form> <!--action=""-->
-            <fieldset>
+          <form method="POST" action="Post-Score"> <!--action=""-->
+            <fieldset style=" width: 100%" color: silver;>
+              <h3 style="padding: 8px">Here you can input your name and Score</h3>
             <p>
-              Name: <input type="text" name="name">   Score: <input type="number" name="score">
+              Name: <input type="text" name="name" style="padding: 8px">
+              Score: <input type="number" name="score" style="padding: 8px">
+              <input type="submit" name="Submit" style="padding: 8px; width: 235px">
             </p>
           </fieldset>
           </form>
