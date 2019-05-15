@@ -1,0 +1,23 @@
+{
+  "name": "webmini",
+  "version": "1.0.0",
+  "description": "Web and stuff",
+  "main": "WebMini.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cruio/WebMini.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cruio/WebMini/issues"
+  },
+  "homepage": "https://github.com/Cruio/WebMini#readme",
+  "dependencies": {
+    "mocha": "^6.1.4",
+    "mongoose": "^5.5.8"
+  }
+}
