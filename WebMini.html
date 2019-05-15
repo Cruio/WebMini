@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <!--this is the menu-->
   <div id="header">
     <div class="container">
@@ -47,30 +48,32 @@
 
       <div class="ScoreArea" style="">
         <h2>High Score</h2>
-        <ul>
-          <li class = "ScoreText"> Mike Score: 1000001</li>
-          <li class = "ScoreText"> Lars Score:1000000</li>
-          <li class = "ScoreText"> Anders Score:999999</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-        </ul>
+        <div id="scoreContainer">
+          <ul id ="listOfScores">
+            <li class = "ScoreText"> Mike Score: 1000001</li>
+            <li class = "ScoreText"> Lars Score:1000000</li>
+            <li class = "ScoreText"> Anders Score:999999</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+            <li class = "ScoreText"> Win</li>
+          </ul>
+        </div>
       </div>
       <div class="scoreSubmit">
-          <form method="POST" action="Post-Score"> <!--action=""-->
+          <form method="POST" action="Post-Score">
             <fieldset style=" width: 100%" color: silver;>
               <h3 style="padding: 8px">Here you can input your name and Score</h3>
-            <p>
+            <p id = "nameAndScore">
               Name: <input type="text" name="name" style="padding: 8px">
               Score: <input type="number" name="score" style="padding: 8px">
               <input type="submit" name="Submit" style="padding: 8px; width: 235px">
@@ -86,7 +89,7 @@
     <div id="header">
     <div class="navArea">
       <ul class="infobuttons" id="nav">
-        <a href="WebMini.html" class ="content content Rcontainer" "current"><li>How To Play</li></a>
+        <a href="WebMini.html" class ="content content Rcontainer"><li>How To Play</li></a>
         <a href="test.html" class="content content Rcontainer" ><li>About The Game</li></a>
         <a href="test.html" class="content2 content Rcontainer" ><li>Free Cake</li></a>
       </ul>
@@ -96,7 +99,6 @@
 
 <section id="content">
   <div class="infoArea container" id="Rcontainer">
-    <p>Do not press either Help or Quit in menu. If you do, refresh page.</p>
     <p>Use either WASD or the arrow keys to control Tobi.</p>
     <p>Dodge the pink bullets, Gubbo the fish, as well as the giant robots.</p>
     <p>Move through green gates to gain health. Do not move through them if they are red.</p>
@@ -107,8 +109,15 @@
 
 </div>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="WebMini.js"></script>
+<div id="scoreRefresh">
+  <nav >
+    <a href="test.html">UPDATE SCOOOORE</a>
+  </nav>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="WebMini.js"></script>
 </body>
 
 </html>

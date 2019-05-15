@@ -150,3 +150,7 @@ h2 {
 fieldset{
   background-color: rgba(52,52,52,1);
 }
+
+#nameAndScore{
+  padding-left: 1%;
+}
