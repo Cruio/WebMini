@@ -27,7 +27,7 @@ const assert = require('assert');
 const ScoreScore2 = require('../MongodbStuff/connection');
 
 //describe tests
-
+describe('saving records',function(){
 
   //create test
   it('saves a record to the database',function(done){
@@ -44,6 +44,6 @@ const ScoreScore2 = require('../MongodbStuff/connection');
       });
 
 
-
+  });
 
 });

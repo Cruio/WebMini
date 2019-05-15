@@ -48,33 +48,19 @@
       <div class="ScoreArea" style="">
         <h2>High Score</h2>
         <ul>
-          <li class = "ScoreText"> Mike Score: 1000001</li>
-          <li class = "ScoreText"> Lars Score:1000000</li>
-          <li class = "ScoreText"> Anders Score:999999</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
-          <li class = "ScoreText"> Win</li>
+
         </ul>
       </div>
       <div class="scoreSubmit">
-          <form method="POST" action="Post-Score"> <!--action=""-->
-            <fieldset style=" width: 100%" color: silver;>
+          <form method="POST" action="/Score"> <!--action=""-->
+            <fieldset style=" width: 100%">
               <h3 style="padding: 8px">Here you can input your name and Score</h3>
             <p>
               Name: <input type="text" name="name" style="padding: 8px">
               Score: <input type="number" name="score" style="padding: 8px">
               <input type="submit" name="Submit" style="padding: 8px; width: 235px">
             </p>
+            <<a href="/Score">View Score</a>
           </fieldset>
           </form>
       </div>
