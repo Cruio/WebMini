@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/poop");
+mongoose.connect("mongodb://localhost:27017/scoreData");
 var nameSchema = new mongoose.Schema({
     name: String,
     score: String
@@ -21,15 +21,15 @@ app.use(express.static("Webmini"));
   MongoClient = require('mongodb').MongoClient;
   url = "mongodb://localhost:27017/";
 
-test ='JO IS IT ME YOU AR LOOKING FOR';
+
 
 
 MongoClient.connect(url, function(err, db) {
    if (err) throw err;
-   var dbo = db.db("poop");
+   var dbo = db.db("scoreData");
    dbo.collection("users").find({}).toArray(function(err, result) {
      if (err) throw err;
-     console.log(result[2]['score']);
+     console.log(result);
 
 
      db.close();

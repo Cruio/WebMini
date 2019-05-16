@@ -18,7 +18,3 @@ $('ul a').on('click', function(e) {                 // User clicks nav link
   //alert(test);
   //alert lets you display a message, good for testing whether variables have the right values
 });
-
-
-
-document.getElementById("ScoreList").innerHTML += ('<li>'+test+'</li>');
