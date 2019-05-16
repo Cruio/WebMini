@@ -1,29 +1,38 @@
-var express = require('express');
-var path = require('path');
-var bodyParser = require('body-parser');
-var mongodb = require('mongodb');
-
-var dbConn = mongoose.connect('mongodb://localhost/ScoreData');
-
+var express = require("express");
 var app = express();
+var port = 3000;
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.resolve(__dirname, 'public')));
-
-app.post('/post-feedback', function (req, res) {
-    dbConn.then(function(db) {
-        delete req.body._id; // for safety reasons
-        db.collection('feedbacks').insertOne(req.body);
-    });
-    res.send('Data received:\n' + JSON.stringify(req.body));
+var mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost:27017/poop");
+var nameSchema = new mongoose.Schema({
+    firstName: String,
+    lastName: String
 });
+var User = mongoose.model("User", nameSchema);
 
-app.get('/view-feedbacks',  function(req, res) {
-    dbConn.then(function(db) {
-        db.collection('feedbacks').find({}).toArray().then(function(feedbacks) {
-            res.status(200).json(feedbacks);
+app.use(express.static("Webmini"));
+
+ app.get("/", (req, res) => {
+     res.sendFile(__dirname + "/" + "Webmini/WebMini.html");
+ });
+
+
+
+app.post("/addname", (req, res) => {
+    var myData = new User(req.body);
+    myData.save()
+        .then(item => {
+            res.send("Name saved to database");
+        })
+        .catch(err => {
+            res.status(400).send("Unable to save to database");
         });
-    });
 });
 
-app.listen(process.env.PORT || 3000, process.env.IP || '127.0.0.1' );
+app.listen(port, () => {
+    console.log("Server listening on port " + port);
+});
