@@ -15,6 +15,10 @@ $('ul a').on('click', function(e) {                 // User clicks nav link
   $(target).load(url +' '+ newcontent).hide().fadeIn('slow'); // New content
   //Where to place it      //The new content
 
-  //alert(replace);
+  //alert(test);
   //alert lets you display a message, good for testing whether variables have the right values
 });
+
+
+
+document.getElementById("ScoreList").innerHTML += ('<li>'+test+'</li>');

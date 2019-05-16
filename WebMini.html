@@ -14,9 +14,6 @@
   <meta charset="utf-8">
   <title>WebMini</title>
   <link rel="stylesheet" href="WebMini.css">
-  <script type="../app.js">
-
-  </script>
 </head>
 
 <body>
@@ -48,21 +45,22 @@
         </div>
       </div>
 
-      <div id="name" style="">
+      <div class="ScoreArea" style="">
         <h2>High Score</h2>
-        <ul id="ScoreList">
+        <ul id=HighScore>
+          <li id="name"></li>
 
-      <li></li>
 
         </ul>
+        
       </div>
       <div class="scoreSubmit">
-          <form method="POST" action="/Score"> <!--action=""-->
+          <form method="post" action="/Score"> <!--action=""-->
             <fieldset style=" width: 100%">
               <h3 style="padding: 8px">Here you can input your name and Score</h3>
             <p>
               Name: <input type="text" name="name" style="padding: 8px">
-              Score: <input  type="number" name="score"  style="padding: 8px">
+              Score: <input type="number" name="score" style="padding: 8px">
               <input type="submit" name="Submit" style="padding: 8px; width: 235px">
             </p>
             <<a href="/Score">View Score</a>
@@ -100,7 +98,7 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="WebMini.js"></script>
-
+    <script src="app.js"></script>
 </body>
 
 </html>

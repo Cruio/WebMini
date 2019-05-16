@@ -16,34 +16,41 @@ var User = mongoose.model("User", nameSchema);
 
 app.use(express.static("Webmini"));
 
- app.get("/", (req, res) => {
-     res.sendFile(__dirname + "/" + "Webmini/WebMini.html");
- });
 
- var MongoClient = require('mongodb').MongoClient;
- var url = "mongodb://localhost:27017/";
 
- MongoClient.connect(url, function(err, db) {
+  MongoClient = require('mongodb').MongoClient;
+  url = "mongodb://localhost:27017/";
+
+test ='JO IS IT ME YOU AR LOOKING FOR';
+
+
+MongoClient.connect(url, function(err, db) {
    if (err) throw err;
    var dbo = db.db("poop");
    dbo.collection("users").find({}).toArray(function(err, result) {
      if (err) throw err;
-     console.log(result);
-     db.close();
+     console.log(result[2]['score']);
 
+
+     db.close();
    });
+
  });
+
 
 app.post("/Score", (req, res) => {
     var myData = new User(req.body);
     myData.save()
         .then(item => {
           res.sendFile(__dirname + "/" + "Webmini/WebMini.html");
-            //res.send("Name saved to database");
         })
         .catch(err => {
             res.status(400).send("Unable to save to database");
         });
+});
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/" + "Webmini/WebMini.html");
 });
 
 app.listen(port, () => {
